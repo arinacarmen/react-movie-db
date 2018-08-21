@@ -6,10 +6,10 @@ import Typography from "@material-ui/core/Typography";
 function Header() {
   return (
     <div>
-      <AppBar position="static" color="default">
+      <AppBar position="static">
         <Toolbar>
           <Typography variant="title" color="inherit">
-            Movie list
+            Movie List
           </Typography>
         </Toolbar>
       </AppBar>
