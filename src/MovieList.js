@@ -14,7 +14,6 @@ function MovieList() {
       <Button className="search-btn" variant="contained" color="secondary">
         Search movie
       </Button>
-
       <div className="movies-container">
         <MovieItem
           title="Indepedence Day"
@@ -22,9 +21,6 @@ function MovieList() {
           description="Fancy Description"
         />
       </div>
-      <Button className="search-btn" variant="contained" color="primary">
-        Add Movie
-      </Button>
     </div>
   );
 }
