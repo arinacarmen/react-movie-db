@@ -1,0 +1,9 @@
+.card-content {
+  width: 60%;
+  display: inline-block;
+}
+.card-btn {
+  float: right;
+  margin-top: 15px;
+  margin-right: 15px;
+}

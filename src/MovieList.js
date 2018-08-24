@@ -11,7 +11,12 @@ function MovieList() {
         className="search-bar"
         placeholder="Find Movies, TV Shows and more..."
       />
-      <Button className="search-btn" variant="contained" color="secondary">
+      <Button
+        className="search-btn"
+        variant="contained"
+        color="secondary"
+        onClick={() => alert("click")}
+      >
         Search movie
       </Button>
       <div className="movies-container">
