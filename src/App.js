@@ -4,6 +4,7 @@ import axios from "axios";
 import Header from "./Header";
 import MovieList from "./MovieList";
 import PlayReact from "./PlayReact";
+import imdb = require('imdb');
 
 class App extends Component {
   constructor(props) {
