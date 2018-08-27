@@ -2,32 +2,39 @@ import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
 import Header from "./Header";
-import MovieList from "./MovieList";
+import MovieListClass, { MovieList } from "./MovieList";
 import PlayReact from "./PlayReact";
-import imdb = require('imdb');
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedMovie: "",
-      buttons: []
+      movies: [
+        {
+          id: 1,
+          title: "test movie",
+          year: 2000,
+          description: "fancy description"
+        }
+      ]
     };
   }
 
-  // componentWillMount(){
-  //   axios.get("http://localhost:5000/movies").then.(response =>{
-  // this.setState({
-  //   buttons: response.data
-  // });
-  //   }
-  // }
+  componentDidMount() {
+    axios.get("http://localhost:5000/movies").then(response => {
+      this.setState({
+        movies: response.data
+      });
+    });
+  }
 
   render() {
+    const { movies } = this.state;
     return (
       <div>
         <Header />
         <MovieList />
+        <MovieListClass movies={movies} />
         <PlayReact />
         <Footer />
       </div>
