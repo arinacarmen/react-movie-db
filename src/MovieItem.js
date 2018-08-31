@@ -12,6 +12,7 @@ const MovieItem = props => {
   return (
     <Card className="movie-item">
       <CardMedia>
+        {/* {props.image} */}
         <img
           src="https://cdn.flickeringmyth.com/wp-content/uploads/2018/03/independence-resurgence-600x337.jpg"
           width="100%"

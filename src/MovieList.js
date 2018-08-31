@@ -4,7 +4,7 @@ import { InputLabel } from "../node_modules/@material-ui/core";
 import MovieItem from "./MovieItem";
 import styles from "./MovieList.css";
 
-function MovieList() {
+export function MovieList() {
   return (
     <div className="container">
       <input
@@ -23,11 +23,31 @@ function MovieList() {
         <MovieItem
           title="Indepedence Day"
           year="1996"
-          description="Fancy Description"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
         />
       </div>
     </div>
   );
 }
+function MovieListClass(props) {
+  const { movies = [] } = props;
+  return (
+    <div className="container">
+      <div className="movies-list">
+        {movies.length > 0
+          ? movies.map(movie => (
+              <MovieItem
+                image={movie.image}
+                title={movie.title}
+                year={movie.year}
+                description={movie.description}
+                key={movie.id}
+              />
+            ))
+          : "Movie not Found. Perhaps add one? "}
+      </div>
+    </div>
+  );
+}
 
-export default MovieList;
+export default MovieListClass;
