@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styles from "./PlayReact.css";
+import "./PlayReact.css";
 
 class PlayReact extends Component {
   constructor(props) {

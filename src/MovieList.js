@@ -1,8 +1,8 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
-import { InputLabel } from "../node_modules/@material-ui/core";
+// import { InputLabel } from "../node_modules/@material-ui/core";
 import MovieItem from "./MovieItem";
-import styles from "./MovieList.css";
+import "./MovieList.css";
 
 export function MovieList() {
   return (

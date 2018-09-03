@@ -6,7 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import CardActions from "@material-ui/core/CardActions";
 import Button from "@material-ui/core/Button";
 import AddIcon from "@material-ui/icons/Add";
-import styles from "./MovieItem.css";
+import "./MovieItem.css";
 
 const MovieItem = props => {
   return (
@@ -15,6 +15,7 @@ const MovieItem = props => {
         {/* {props.image} */}
         <img
           src="https://cdn.flickeringmyth.com/wp-content/uploads/2018/03/independence-resurgence-600x337.jpg"
+          alt="giikle"
           width="100%"
         />
       </CardMedia>
