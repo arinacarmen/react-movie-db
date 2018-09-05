@@ -1,8 +1,9 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
-import { InputLabel } from "../node_modules/@material-ui/core";
+// import { InputLabel } from "../node_modules/@material-ui/core";
 import MovieItem from "./MovieItem";
-import styles from "./MovieList.css";
+import "./MovieList.css";
+import SearchBar from "./Components/SearchBar";
 
 export function MovieList() {
   return (
@@ -19,6 +20,11 @@ export function MovieList() {
       >
         Search movie
       </Button>
+
+      <div className="search-container">
+        <SearchBar />
+      </div>
+
       <div className="movies-container">
         <MovieItem
           title="Indepedence Day"

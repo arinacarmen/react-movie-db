@@ -1,0 +1,11 @@
+.search-component {
+  flex-wrap: nowrap;
+  display: flex;
+}
+
+.search-component .search {
+  width: 100%;
+}
+.search-results {
+  width: 100%;
+}

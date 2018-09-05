@@ -1,3 +1,7 @@
 .movies-container {
   padding: 10px 0px;
 }
+container {
+  display: flex;
+  flex-wrap: flex;
+}

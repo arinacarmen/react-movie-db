@@ -3,7 +3,6 @@ import "./App.css";
 import axios from "axios";
 import Header from "./Header";
 import MovieListClass, { MovieList } from "./MovieList";
-import PlayReact from "./PlayReact";
 
 class App extends Component {
   constructor(props) {
@@ -35,7 +34,6 @@ class App extends Component {
         <Header />
         <MovieList />
         <MovieListClass movies={movies} />
-        <PlayReact />
         <Footer />
       </div>
     );
