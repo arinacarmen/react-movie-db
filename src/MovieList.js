@@ -5,40 +5,28 @@ import MovieItem from "./MovieItem";
 import "./MovieList.css";
 import SearchBar from "./Components/SearchBar";
 
-export function MovieList() {
+export function MovieList(props) {
+  const { movies = [], addMovie } = props;
   return (
     <div className="container">
-      <input
-        className="search-bar"
-        placeholder="Find Movies, TV Shows and more..."
-      />
-      <Button
-        className="search-btn"
-        variant="contained"
-        color="secondary"
-        onClick={() => alert("click")}
-      >
-        Search movie
-      </Button>
-
       <div className="search-container">
         <SearchBar />
       </div>
 
-      <div className="movies-container">
+      {/* <div className="movies-container">
         <MovieItem
           title="Indepedence Day"
           year="1996"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
         />
-      </div>
+      </div> */}
     </div>
   );
 }
 function MovieListClass(props) {
-  const { movies = [] } = props;
+  const { movies = [], addMovie, deleteMovie } = props;
   return (
-    <div className="container">
+    <div className="movies-container">
       <div className="movies-list">
         {movies.length > 0
           ? movies.map(movie => (
@@ -48,6 +36,7 @@ function MovieListClass(props) {
                 year={movie.year}
                 description={movie.description}
                 key={movie.id}
+                deleteMovie={deleteMovie.movie}
               />
             ))
           : "Movie not Found. Perhaps add one? "}

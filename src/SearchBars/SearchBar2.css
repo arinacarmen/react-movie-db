@@ -1,0 +1,19 @@
+.s2-container {
+  padding: 10px;
+  border-bottom: 1px solid #cecece;
+  text-align: center;
+}
+.s2-container input {
+  width: 60%;
+  margin-right: 10px;
+  padding: 8px;
+}
+
+.s2-container .btn-search2 {
+  background-color: #f6402c;
+  color: #fff;
+}
+.s2-container .btn-search2:hover {
+  background-color: #ff5505;
+  color: #fff;
+}

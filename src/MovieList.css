@@ -1,7 +1,11 @@
-.movies-container {
-  padding: 10px 0px;
+.search-container {
+  margin-bottom: 10px;
 }
-container {
+.movies-list {
   display: flex;
-  flex-wrap: flex;
+  flex-wrap: wrap;
+}
+.movie-item {
+  flex: 1 1 300px;
+  margin: 1%;
 }

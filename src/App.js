@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
 import Header from "./Header";
+import SearchBar2 from "./SearchBars/SearchBar2";
 import MovieListClass, { MovieList } from "./MovieList";
+import { getMovies, createMovie, deleteMovie } from "./Api";
 
 class App extends Component {
   constructor(props) {
@@ -26,13 +28,34 @@ class App extends Component {
       });
     });
   }
+  deleteMovie = movie => {
+    console.log(movie);
+  };
+
+  addMovie = movie => {
+    const newMovie = {
+      ...movie,
+      id: movie.imdb_id,
+      name: movie.title
+    };
+    createMovie(newMovie).then(() => {
+      this.setState({
+        movie: [newMovie, ...this.state.movies]
+      });
+    });
+  };
 
   render() {
     const { movies } = this.state;
     return (
       <div>
         <Header />
-        <MovieList />
+        <SearchBar2 />
+        <MovieList
+          movies={this.state.movies}
+          addMovie={this.addMovie}
+          deleteMovie={this.deleteMovie}
+        />
         <MovieListClass movies={movies} />
         <Footer />
       </div>

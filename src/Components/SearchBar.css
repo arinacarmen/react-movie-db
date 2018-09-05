@@ -1,11 +1,26 @@
 .search-component {
   flex-wrap: nowrap;
-  display: flex;
 }
 
 .search-component .search {
-  width: 100%;
+  width: 60%;
+  text-align: center;
 }
 .search-results {
-  width: 100%;
+  width: 60%;
+  text-align: center;
+}
+.search-component .icon-search {
+  background-color: none;
+  color: #f6402c;
+  text-align: center;
+}
+
+.search-component .icon-search:hover {
+  background-color: #ff5505;
+  color: #fff;
+}
+.result-container {
+  width: 60%;
+  text-align: center;
 }

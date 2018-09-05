@@ -4,26 +4,31 @@ import "./SearchBar.css";
 import IconButton from "@material-ui/core/IconButton";
 import Icon from "@material-ui/core/Icon";
 import SearchResults from "./SearchResults";
-import { searchMovies } from "../Api";
+import { searchMovies } from "./Api";
 
 class SearchBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      resuts: [],
+      results: [],
       searchTerm: ""
     };
   }
-  onInputChange(event) {
+  onInputChange = event => {
     const { value } = event.target;
+    event.preventDefault();
     this.setState({
       searchTerm: value
     });
-  }
-  addMovie = () => {};
+  };
+
+  addMovie = movie => {
+    this.props.addMovie(movie);
+  };
 
   search = event => {
     event.preventDefault();
+    this.setState({ results: [] });
     searchMovies(this.state.searchTerm).then(response => {
       this.setState({
         results: [response.data]
@@ -38,7 +43,7 @@ class SearchBar extends Component {
         <TextField
           label="Find Movies, TV Shows and more..."
           className="search"
-          value={this.state.searchTerm}
+          value={searchTerm}
           onChange={this.onInputChange}
         />
 
@@ -50,7 +55,7 @@ class SearchBar extends Component {
           {results.length > 0
             ? results.map(movie => (
                 <SearchResults
-                  key={movie.imdb.id}
+                  key={movie.imdb_id}
                   movie={movie}
                   addMovie={this.addMovie}
                 />

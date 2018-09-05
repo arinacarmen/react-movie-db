@@ -1,1 +1,1 @@
-export const ImdbApiKey = "DTawcmkq6PA458lQI9Z2YQzjgjRkeV";
+export const ImdbApiKey = "JVpW6YwrNyKjphGchtH5pzqBdIxSJi";
