@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
 // import { InputLabel } from "../node_modules/@material-ui/core";
 import MovieItem from "./MovieItem";
 import "./MovieList.css";
@@ -10,7 +9,7 @@ export function MovieList(props) {
   return (
     <div className="container">
       <div className="search-container">
-        <SearchBar />
+        <SearchBar addMovie={addMovie} />
       </div>
 
       {/* <div className="movies-container">
@@ -31,12 +30,12 @@ function MovieListClass(props) {
         {movies.length > 0
           ? movies.map(movie => (
               <MovieItem
-                image={movie.image}
+                url={movie.poster}
                 title={movie.title}
-                year={movie.year}
-                description={movie.description}
+                plot={movie.plot}
                 key={movie.id}
-                deleteMovie={deleteMovie.movie}
+                deleteMovie={deleteMovie}
+                id={movie.id}
               />
             ))
           : "Movie not Found. Perhaps add one? "}

@@ -1,0 +1,30 @@
+.movie-item {
+  padding-bottom: 15px;
+}
+
+.movie-item .icon-add {
+  background-color: none;
+  color: blue;
+}
+.movie-item .icon-add:hover {
+  background-color: blue;
+  color: #fff;
+}
+.movie-item .icon-del {
+  background-color: none;
+  color: #f6402c;
+}
+
+.movie-item .icon-del:hover {
+  background-color: #ff5505;
+  color: #fff;
+}
+.card-content .cover {
+  width: 200px;
+}
+.placeholder {
+  width: 200px;
+  height: 200px;
+  padding-top: 90px;
+  background-color: #cecece;
+}

@@ -1,26 +1,47 @@
 .search-component {
   flex-wrap: nowrap;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .search-component .search {
-  width: 60%;
-  text-align: center;
+  width: 66%;
 }
 .search-results {
-  width: 60%;
-  text-align: center;
+  margin: 0 auto;
 }
 .search-component .icon-search {
   background-color: none;
-  color: #f6402c;
-  text-align: center;
+  color: blue;
 }
 
 .search-component .icon-search:hover {
+  background-color: blue;
+  color: #fff;
+}
+.search-component .icon-add {
+  background-color: none;
+  color: blue;
+}
+
+.search-component .icon-add:hover {
+  background-color: blue;
+  color: #fff;
+}
+.search-component .icon-del {
+  background-color: none;
+  color: #f6402c;
+}
+
+.search-component .icon-del:hover {
   background-color: #ff5505;
   color: #fff;
 }
 .result-container {
-  width: 60%;
-  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+}
+.card-btns {
+  justify-content: center;
+  margin-bottom: 15px;
 }

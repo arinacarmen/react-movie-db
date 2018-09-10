@@ -57,7 +57,7 @@ class SearchBar extends Component {
                 <SearchResults
                   key={movie.imdb_id}
                   movie={movie}
-                  addMovie={this.addMovie}
+                  addMovie={() => this.addMovie(movie)}
                 />
               ))
             : ""}
